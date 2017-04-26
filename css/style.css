@@ -1,0 +1,140 @@
+/*Universal*/
+* {
+  margin: 0;
+  box-sizing: border-box; }
+
+a:link, a:visited {
+  color: black; }
+
+/************
+Main Styling
+************/
+/*********
+    NAV
+*********/
+.main-header, .nav {
+  display: flex;
+  flex-direction: column; }
+
+.main-header .sitelogo {
+  align-self: center; }
+  .main-header .sitelogo a {
+    text-decoration: none; }
+.main-header .nav {
+  padding-left: 0; }
+  .main-header .nav .navitem {
+    list-style: none;
+    font-size: 24px; }
+    .main-header .nav .navitem a {
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #ebecec;
+      text-align: center; }
+
+/*********
+ Computers
+*********/
+.comp {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.top, .base {
+  margin: 0 auto; }
+
+.laptop {
+  margin: 15px auto; }
+  .laptop .top {
+    height: 120px;
+    width: 160px;
+    background: black;
+    border: 8px solid #97989E;
+    border-radius: 10px 10px 0 0; }
+  .laptop .base {
+    height: 10px;
+    width: 200px;
+    background: #97989E;
+    border: 1px solid #97989E;
+    border-radius: 0 0 100px 100px; }
+  .laptop .base:before {
+    content: ' ';
+    display: block;
+    height: 5px;
+    width: 50px;
+    background: #343436;
+    margin: auto;
+    border-radius: 0 0 50px 50px; }
+
+.tablet {
+  height: 120px;
+  width: 160px;
+  margin: 15px auto;
+  background: black;
+  border: 5px solid #97989E;
+  border-right: 15px solid #97989E;
+  border-left: 15px solid #97989E;
+  border-radius: 10px; }
+
+.tablet:before {
+  content: ' ';
+  display: block;
+  height: 10px;
+  width: 10px;
+  background: grey;
+  border-radius: 100%;
+  margin-left: 101%;
+  margin-top: 35%; }
+
+.phone {
+  height: 100px;
+  width: 50px;
+  margin: 15px auto;
+  background: black;
+  border: 2px solid #97989E;
+  border-radius: 10px;
+  border-width: 8px 2px 8px 2px; }
+
+/************
+Media Queries
+************/
+/************
+    NAV
+************/
+@media (min-width: 769px) {
+  .main-header {
+    height: 75px;
+    justify-content: flex-end;
+    background: pink; }
+    .main-header .nav {
+      margin-top: 3em;
+      flex-direction: row;
+      justify-content: space-around; }
+      .main-header .nav .navitem a {
+        border-bottom-color: transparent; }
+      .main-header .nav .navitem a:hover {
+        border-bottom: 1px solid #000; } }
+@media (min-width: 1025px) {
+  .main-header {
+    flex-direction: row;
+    padding: 0 5%;
+    background-color: lightblue; }
+    .main-header .sitelogo {
+      margin-right: auto; }
+    .main-header .nav {
+      margin-top: 0;
+      align-self: center;
+      justify-content: space-around; }
+      .main-header .nav .navitem {
+        margin: 0 .65em; } }
+/************
+  Computers
+************/
+@media (min-width: 769px) {
+  .comp {
+    flex-direction: row; }
+    .comp .laptop, .comp .tablet, .comp .phone {
+      align-self: flex-start; } }
+
+/*# sourceMappingURL=style.css.map */
