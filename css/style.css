@@ -50,13 +50,14 @@ Main Styling
     grid-template-columns: 50% 50%;
     justify-items: center; }
     .comp .section1 .laptop {
-      margin: 0px; }
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
       .comp .section1 .laptop .top {
         height: 120px;
         width: 160px;
-        margin-left: 20px;
-        background-image: url("../images/smallfeedme.png");
-        background-size: center;
+        background: black;
         border: 8px solid #97989E;
         border-radius: 10px 10px 0 0; }
       .comp .section1 .laptop .base {
@@ -164,9 +165,6 @@ hr {
 /************
 Media Queries
 ************/
-/************
-    NAV
-************/
 @media (min-width: 769px) {
   /*HEADER*/
   .main-header {
@@ -186,9 +184,7 @@ Media Queries
   .comp {
     display: flex;
     justify-content: space-around; }
-    .comp .laptop {
-      margin: 0; }
-    .comp .labels {
+    .comp .sections .labels {
       display: none; }
     .comp .hr-section {
       display: none; } }
@@ -204,7 +200,26 @@ Media Queries
       align-self: center;
       justify-content: space-around; }
       .main-header .nav .navitem {
-        margin: 0 .65em; } }
+        margin: 0 .65em; }
+
+  .comp {
+    display: flex;
+    justify-content: space-around; }
+    .comp .section1 .laptop {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .comp .section1 .laptop .top {
+        width: 225px;
+        height: 180px; }
+      .comp .section1 .laptop .base {
+        width: 260px; }
+    .comp .section2 .tablet {
+      width: 225px;
+      height: 180px; }
+    .comp .section3 .phone {
+      width: 100px;
+      height: 200px; } }
 /************
 portfolio mq
 ************/

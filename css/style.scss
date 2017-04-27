@@ -67,6 +67,7 @@ Main Styling
 }
 
 .comp{
+  
   height: calc(100vh);
 
   .section1, .section2, .section3{
@@ -78,12 +79,13 @@ Main Styling
     justify-items: center;
     .laptop{
       margin:0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .top{
         height:120px;
         width:160px;
-        margin-left:20px;
-        background-image: url("../images/smallfeedme.png");
-        background-size: center;
+        background:black;
         border: 8px solid #97989E;
         border-radius: 10px 10px 0 0
       }
@@ -214,10 +216,6 @@ hr{
 /************
 Media Queries
 ************/
-
-/************
-    NAV
-************/
 @media (min-width: 769px){
 
   /*HEADER*/
@@ -245,16 +243,13 @@ Media Queries
     display: flex;
     justify-content: space-around;
 
-    .laptop{
-      margin:0;
-    }
-
-
-    .labels{
-      display: none;
+    .sections{
+      .labels{
+        display: none;
+      }
     }
     .hr-section{
-      display:none;
+      display: none;
     }
   }
 
@@ -278,6 +273,41 @@ Media Queries
       }
     }
   }
+
+  .comp{
+    display: flex;
+    justify-content: space-around;
+    .section1{
+      .laptop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .top{
+          width:225px;
+          height:180px;
+        }
+        .base{
+          width: 260px;
+        }
+      }//laptop
+    }//section1
+
+    .section2{
+      .tablet{
+        width: 225px;
+        height:180px;
+      }
+    }
+
+    .section3{
+      .phone{
+        width: 100px;
+        height:200px;
+      }
+    }
+  } //Comp tag
+
 }
 
 /************
