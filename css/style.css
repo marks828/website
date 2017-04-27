@@ -32,69 +32,134 @@ Main Styling
       text-align: center; }
 
 /*********
- Computers
+ SECTIONS
 *********/
-.comp {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-  margin-bottom: 25px; }
+/*********
+ SECTIONS
+*********/
+.hr-section {
+  border: 1px solid black;
+  margin: 25px 0; }
 
-.top, .base {
+.comp {
+  height: calc(100vh); }
+  .comp .section1, .comp .section2, .comp .section3 {
+    align-self: center; }
+  .comp .section1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center; }
+    .comp .section1 .laptop {
+      margin: 0px; }
+      .comp .section1 .laptop .top {
+        height: 120px;
+        width: 160px;
+        margin-left: 20px;
+        background-image: url("../images/smallfeedme.png");
+        background-size: center;
+        border: 8px solid #97989E;
+        border-radius: 10px 10px 0 0; }
+      .comp .section1 .laptop .base {
+        height: 10px;
+        width: 200px;
+        background: #97989E;
+        border: 1px solid #97989E;
+        border-radius: 0 0 100px 100px; }
+      .comp .section1 .laptop .base:before {
+        content: ' ';
+        display: block;
+        height: 5px;
+        width: 50px;
+        background: #343436;
+        margin: auto;
+        border-radius: 0 0 50px 50px; }
+    .comp .section1 .projects-label {
+      align-self: center; }
+  .comp .section2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center; }
+    .comp .section2 .tablet {
+      height: 120px;
+      width: 160px;
+      background: black;
+      border: 5px solid #97989E;
+      border-right: 15px solid #97989E;
+      border-left: 15px solid #97989E;
+      border-radius: 10px; }
+      .comp .section2 .tablet p {
+        color: white;
+        position: relative;
+        left: 10px;
+        bottom: 35px; }
+    .comp .section2 .tablet:before {
+      content: ' ';
+      display: block;
+      height: 10px;
+      width: 10px;
+      background: grey;
+      border-radius: 100%;
+      margin-left: 101%;
+      margin-top: 35%; }
+    .comp .section2 .about-label {
+      align-self: center; }
+  .comp .section3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center; }
+    .comp .section3 .phone {
+      height: 100px;
+      width: 50px;
+      background: black;
+      border: 2px solid #97989E;
+      border-radius: 10px;
+      border-width: 8px 2px 8px 2px; }
+    .comp .section3 .contact-label {
+      align-self: center; }
+
+/************
+ dev section
+************/
+#skills {
+  background: #919191;
+  text-align: center;
+  padding: 15px 0; }
+
+.devimg {
+  width: 10%; }
+
+.other-skills {
+  font-size: 25px; }
+
+/************
+ PORTFOLIO
+************/
+.project-photos {
+  width: 75%;
+  margin-bottom: 10px; }
+
+.project-descriptions {
+  text-align: center; }
+
+hr {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid grey; }
+
+.project-container p.project-links {
+  margin: 0 auto 5px;
+  font-size: 20px;
+  text-align: center; }
+
+.project-container .project-descriptions p {
+  font-size: 20px;
+  font-family: georgia, sans-serif;
+  text-align: center; }
+
+.project-container .project-descriptions .project-photos {
   margin: 0 auto; }
 
-.laptop {
-  margin: 15px auto; }
-  .laptop .top {
-    height: 120px;
-    width: 160px;
-    background: black;
-    border: 8px solid #97989E;
-    border-radius: 10px 10px 0 0; }
-  .laptop .base {
-    height: 10px;
-    width: 200px;
-    background: #97989E;
-    border: 1px solid #97989E;
-    border-radius: 0 0 100px 100px; }
-  .laptop .base:before {
-    content: ' ';
-    display: block;
-    height: 5px;
-    width: 50px;
-    background: #343436;
-    margin: auto;
-    border-radius: 0 0 50px 50px; }
-
-.tablet {
-  height: 120px;
-  width: 160px;
-  margin: 15px auto;
-  background: black;
-  border: 5px solid #97989E;
-  border-right: 15px solid #97989E;
-  border-left: 15px solid #97989E;
-  border-radius: 10px; }
-
-.tablet:before {
-  content: ' ';
-  display: block;
-  height: 10px;
-  width: 10px;
-  background: grey;
-  border-radius: 100%;
-  margin-left: 101%;
-  margin-top: 35%; }
-
-.phone {
-  height: 100px;
-  width: 50px;
-  margin: 15px auto;
-  background: black;
-  border: 2px solid #97989E;
-  border-radius: 10px;
-  border-width: 8px 2px 8px 2px; }
+#boi {
+  margin-top: 15px; }
 
 /************
 Media Queries
@@ -103,18 +168,30 @@ Media Queries
     NAV
 ************/
 @media (min-width: 769px) {
+  /*HEADER*/
   .main-header {
     height: 75px;
     justify-content: flex-end;
     background: pink; }
     .main-header .nav {
-      margin-top: 3em;
+      margin-top: 1em;
       flex-direction: row;
       justify-content: space-around; }
       .main-header .nav .navitem a {
         border-bottom-color: transparent; }
       .main-header .nav .navitem a:hover {
-        border-bottom: 1px solid #000; } }
+        border-bottom: 1px solid #000; }
+
+  /*home page*/
+  .comp {
+    display: flex;
+    justify-content: space-around; }
+    .comp .laptop {
+      margin: 0; }
+    .comp .labels {
+      display: none; }
+    .comp .hr-section {
+      display: none; } }
 @media (min-width: 1025px) {
   .main-header {
     flex-direction: row;
@@ -129,12 +206,21 @@ Media Queries
       .main-header .nav .navitem {
         margin: 0 .65em; } }
 /************
+portfolio mq
+************/
+@media (min-width: 850px) {
+  .project-descriptions {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 10px; }
+
+  .project-photos {
+    width: 50%; } }
+/************
   Computers
 ************/
-@media (min-width: 769px) {
-  .comp {
-    flex-direction: row; }
-    .comp .laptop, .comp .tablet, .comp .phone {
-      align-self: flex-start; } }
+/********************
+ portfolio queries
+********************/
 
 /*# sourceMappingURL=style.css.map */
