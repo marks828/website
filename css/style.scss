@@ -67,7 +67,6 @@ Main Styling
 }
 
 .comp{
-  
   height: calc(100vh);
 
   .section1, .section2, .section3{
@@ -78,7 +77,7 @@ Main Styling
     grid-template-columns: 50% 50%;
     justify-items: center;
     .laptop{
-      margin:0px;
+      margin:auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -154,6 +153,7 @@ Main Styling
     .phone{
       height:100px;
       width:50px;
+      // margin:auto;
       background:black;
       border: 2px solid #97989E;
       border-radius: 10px;
